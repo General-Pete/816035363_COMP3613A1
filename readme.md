@@ -1,4 +1,4 @@
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/General-Pete/816035363_COMP3613A1.git)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/uwidcit/flaskmvc)
 <a href="https://render.com/deploy?repo=https://github.com/uwidcit/flaskmvc">
   <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
@@ -191,3 +191,98 @@ If you are running into errors in gitpod when updateding your github actions fil
 ## Database Issues
 
 If you are adding models you may need to migrate the database with the commands given in the previous database migration section. Alternateively you can delete you database file.
+
+
+## CLI Commands
+
+NOTE - if using input with multiple words, use underscore!
+
+
+CLI Commands Documentation
+Course and Staff Creation Commands
+
+Create Course
+To create a new course, use the following command:
+
+flask create course <name> <faculty> <semester>
+
+Example: flask create course "COMP 3607" "Science and Technology" "Semester 1"
+
+This command creates a new course with the specified name, faculty, and semester.
+
+Create Lecturer
+To create a new lecturer, use the following command:
+
+flask create lecturer <name> <faculty> <employmentyear> <specialty>
+
+Example: flask create lecturer "John Doe" "Science and Technology" 2015 "Artificial Intelligence"
+
+This command creates a new lecturer with the specified name, faculty, employment year, and specialty.
+
+Create Tutor
+To create a new tutor, use the following command:
+
+flask create tutor <name> <faculty> <employmentyear> <department>
+
+Example: flask create tutor "Jane Doe" "Science and Technology" 2018 "Mathematics"
+
+This command creates a new tutor with the specified name, faculty, employment year, and department.
+
+Create Teaching Assistant (TA)
+To create a new teaching assistant (TA), use the following command:
+
+flask create ta <name> <faculty> <employmentyear> <department>
+
+Example: flask create ta "Alex Smith" "Science and Technology" 2020 "Computer Science"
+
+This command creates a new teaching assistant with the specified name, faculty, employment year, and department.
+
+
+
+Staff Assignment Commands
+Assign Lecturer
+To assign a lecturer to a course, use the following command:
+
+flask assign lecturer <lecturer_id> <course_id>
+
+Example: flask assign lecturer 1 2
+
+This command assigns the lecturer with the given lecturer_id to the course with the given course_id.
+
+Assign Tutor
+To assign a tutor to a course, use the following command:
+
+flask assign tutor <tutor_id> <course_id>
+
+Example: flask assign tutor 3 2
+
+This command assigns the tutor with the given tutor_id to the course with the given course_id.
+
+Assign Teaching Assistant (TA)
+To assign a teaching assistant (TA) to a course, use the following command:
+
+flask assign ta <ta_id> <course_id>
+
+Example: flask assign ta 4 2
+
+This command assigns the teaching assistant with the given ta_id to the course with the given course_id.
+
+
+
+Viewing Data
+View All Courses
+To view all courses in the database, use the following command:
+
+flask view courses
+
+This command displays a list of all courses currently available in the database.
+
+View Staff Assigned to a Course
+To view all staff members assigned to a specific course, use the following command:
+
+flask view staff <course_id>
+
+Example: flask view staff 2
+
+This command displays the lecturer, tutors, and teaching assistants assigned to the course with the given course_id.
+
